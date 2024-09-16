@@ -49,7 +49,18 @@ return {
 			lspconfig.tsserver.setup({
         capabilities = capabilities
       })
-
+      lspconfig.emmet_language_server.setup({
+        capabilities = capabilities
+      })
+      lspconfig.jsonls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.cssls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.html.setup({
+        capabilities = capabilities
+      })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "ca", vim.lsp.buf.code_action, {})
